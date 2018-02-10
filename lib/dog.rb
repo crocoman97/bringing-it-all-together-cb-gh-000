@@ -46,7 +46,7 @@ class Dog
     SELECT * FROM dogs WHERE id = ?
     SQL
     binding.pry
-    info = DB[:conn].execute(sql,id)
+    info = DB[:conn].execute(sql,id).flatten
     
     Song.new(name: info[1], breed: info[2], id: info[0])
   end
