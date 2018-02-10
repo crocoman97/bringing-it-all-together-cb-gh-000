@@ -11,6 +11,7 @@ class Dog
     sql = <<-SQL
     CREATE TABLE dogs ()
     SQL
+    DB[:conn].execute(sql)
   end
   
 end
