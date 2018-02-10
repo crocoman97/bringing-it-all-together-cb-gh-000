@@ -59,6 +59,7 @@ class Dog
     else 
       dog = Dog.new(name: dog_info[1], breed: dog_info[2], id: dog_info[0])
     end
+    dog
   end
   
 end
