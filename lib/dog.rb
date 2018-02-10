@@ -55,11 +55,13 @@ class Dog
     SQL
     dog_info = DB[:conn].execute(sql,name,breed)
     if !dog_info
-      
+      create(name: name,breed: breed)
     else 
-      
+      self.update
     end
   end
+  
+  def self.update
   
 end
 
