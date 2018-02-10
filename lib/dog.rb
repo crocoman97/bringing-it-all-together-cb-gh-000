@@ -61,7 +61,7 @@ class Dog
     end
   end
   
-  def 
+  def new_from_db
     
   end
   
