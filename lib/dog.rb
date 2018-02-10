@@ -49,6 +49,13 @@ class Dog
     Dog.new(name: info[1], breed: info[2], id: info[0])
   end
   
+  def self.find_or_create_by()
+    sql = <<-SQL
+    SELECT * FROM dogs WHERE 
+    SQL
+    if !
+  end
+  
 end
 
 
