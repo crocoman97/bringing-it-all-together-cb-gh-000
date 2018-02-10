@@ -73,6 +73,10 @@ class Dog
     new_from_db(row)
   end
   
+  def self.update
+    
+  end
+  
 end
 
 
