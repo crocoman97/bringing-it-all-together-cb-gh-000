@@ -53,15 +53,14 @@ class Dog
     sql = <<-SQL
     SELECT * FROM dogs WHERE name = ? AND breed = ?
     SQL
-    dog_info = DB[:conn].execute(sql,name,breed)
+    dog_info = DB[:conn].execute(sql,name,breed).flatten
     if !dog_info
       create(name: name,breed: breed)
     else 
-      self.update
+      dog_info[1] = name 
+      dog_info[2] = breed
     end
   end
-  
-  def self.update
   
 end
 
