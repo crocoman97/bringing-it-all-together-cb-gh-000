@@ -81,10 +81,3 @@ class Dog
   end
   
 end
-
-
-
-
-# learn --fail-fast
-
-
