@@ -54,7 +54,7 @@ class Dog
     SELECT * FROM dogs WHERE name = ? AND breed = ?
     SQL
     dog_info = DB[:conn].execute(sql,name,breed).flatten
-    if !dog_info
+    if !dog_info.empty?
       create(name: name,breed: breed)
     else 
       dog_info[1] = name 
