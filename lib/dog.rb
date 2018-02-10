@@ -45,7 +45,7 @@ class Dog
     sql = <<-SQL
     SELECT * FROM dogs WHERE id = ?
     SQL
-    info = DB[:conn].execute(sql,id)
+    info = DB[:conn].execute(sql,id).first
     Song.new(name: info[1], breed: info[2], id: info[0])
   end
   
