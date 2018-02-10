@@ -48,7 +48,7 @@ class Dog
     binding.pry
     info = DB[:conn].execute(sql,id).flatten
     
-    Song.new(name: info[1], breed: info[2], id: info[0])
+    Dog.new(name: info[1], breed: info[2], id: info[0])
   end
   
 end
